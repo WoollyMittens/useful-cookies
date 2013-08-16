@@ -14,6 +14,8 @@ This include can be added to the header or placed inline before the script is in
 
 ## Functions
 
+### load
+
 ```javascript
 value = useful.cookies.load(name);
 ```
@@ -23,6 +25,8 @@ Retrieves a value from a cookie.
 **name : {string}** - Name of a parameter stored as a cookie.
 
 **value : {string}** - Returned value of the named parameter stored as a cookie.
+
+### save
 
 ```javascript
 useful.cookies.save(name, value, expires, path, domain, secure);
@@ -41,6 +45,8 @@ Saves a name-value pair to a cookie.
 **domain : {string}** - Domain for which the cookie is valid.
 
 **secure : {boolean}** - Specifies if the cookie is supposed to be secure.
+
+### clear
 
 ```javascript
 useful.cookies.clear(name, path, domain);
