@@ -21,6 +21,7 @@ value = useful.cookies.load(name);
 Retrieves a value from a cookie.
 
 **name : {string}** - Name of a parameter stored as a cookie.
+
 **value : {string}** - Returned value of the named parameter stored as a cookie.
 
 ```javascript
@@ -30,10 +31,15 @@ useful.cookies.save(name, value, expires, path, domain, secure);
 Saves a name-value pair to a cookie.
 
 **name : {string}** - Name of a parameter stored as a cookie.
+
 **value : {string}** - Value to be stored as a cookie.
+
 **expires : {object}** - A date object setting the expiration date of the cookie.
+
 **path : {string}** - URL path for which the cookie is valid.
+
 **domain : {string}** - Domain for which the cookie is valid.
+
 **secure : {boolean}** - Specifies if the cookie is supposed to be secure.
 
 ```javascript
@@ -43,7 +49,9 @@ useful.cookies.clear(name, path, domain);
 Clears a name-value pair from a cookie.
 
 **name : {string}** - Name of a parameter stored as a cookie.
+
 **path : {string}** - URL path for which the cookie is valid.
+
 **domain : {string}** - Domain for which the cookie is valid.
 
 ## License
