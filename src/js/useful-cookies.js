@@ -6,59 +6,62 @@
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 */
 
-(function (useful) {
+// public object
+var useful = useful || {};
+
+(function(){
 
 	// Invoke strict mode
 	"use strict";
 
-	// private functions
-	var cookies = cookies || {};
+	// Create a private object for this library
+	useful.cookies = {
 
-	// calculates an expiration date for cookies
-	cookies.expiration = function (days) {
-		// return a date object in the future
-		return new Date(
-			new Date().getTime() + days * 24 * 60 * 60 * 1000
-		);
-	};
+		// calculates an expiration date for cookies
+		expiration : function (days) {
+			// return a date object in the future
+			return new Date(
+				new Date().getTime() + days * 24 * 60 * 60 * 1000
+			);
+		},
 
-	// save a value into a cookie
-	cookies.save = function (name, value, expires, path, domain, secure) {
-		// formulate the cookie
-		document.cookie = name + "=" + encodeURIComponent(value) +
-			((expires) ? "; expires=" + expires.toGMTString() : "") +
-			((path) ? "; path=" + path : "") +
-			((domain) ? "; domain=" + domain : "") +
-			((secure) ? "; secure" : "");
-	};
+		// save a value into a cookie
+		save : function (name, value, expires, path, domain, secure) {
+			// formulate the cookie
+			document.cookie = name + "=" + encodeURIComponent(value) +
+				((expires) ? "; expires=" + expires.toGMTString() : "") +
+				((path) ? "; path=" + path : "") +
+				((domain) ? "; domain=" + domain : "") +
+				((secure) ? "; secure" : "");
+		},
 
-	// loads a value from a cookie
-	cookies.load = function (name) {
-		// return the clipped value from the cookie
-		return (
-			(document.cookie.indexOf(name + '=') > -1) ?
-				decodeURIComponent(document.cookie.split(name + '=')[1].split(';')[0]) :
-				null
-		);
-	};
+		// loads a value from a cookie
+		load : function (name) {
+			// return the clipped value from the cookie
+			return (
+				(document.cookie.indexOf(name + '=') > -1) ?
+					decodeURIComponent(document.cookie.split(name + '=')[1].split(';')[0]) :
+					null
+			);
+		},
 
-	// clears the value from a cookie
-	cookies.clear = function (name, path, domain) {
-		// if the cookie exists
-		if (cookies.load(name)) {
-			// clear and expire it
-			document.cookie = name + "=" +
-			((path) ? "; path=" + path : "") +
-			((domain) ? "; domain=" + domain : "") +
-			"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+		// clears the value from a cookie
+		clear : function (name, path, domain) {
+			// if the cookie exists
+			if (cookies.load(name)) {
+				// clear and expire it
+				document.cookie = name + "=" +
+				((path) ? "; path=" + path : "") +
+				((domain) ? "; domain=" + domain : "") +
+				"; expires=Thu, 01-Jan-70 00:00:01 GMT";
+			}
 		}
+
 	};
 
-	// public functions
-	useful.cookies = useful.cookies || {};
-	useful.cookies.expiration = cookies.expiration;
-	useful.cookies.save = cookies.save;
-	useful.cookies.load = cookies.load;
-	useful.cookies.clear = cookies.clear;
+	// return as a require.js module
+	if (typeof module !== 'undefined') {
+		exports = module.exports = useful.cookies;
+	}
 
-}(window.useful = window.useful || {}));
+})();
