@@ -48,7 +48,7 @@ var useful = useful || {};
 		// clears the value from a cookie
 		clear : function (name, path, domain) {
 			// if the cookie exists
-			if (cookies.load(name)) {
+			if (this.load(name)) {
 				// clear and expire it
 				document.cookie = name + "=" +
 				((path) ? "; path=" + path : "") +
