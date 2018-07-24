@@ -1,4 +1,4 @@
-# useful.cookies.js: Cookies Library
+# cookies.js: Cookies Library
 
 A library of useful functions to ease working with cookies.
 
@@ -9,15 +9,7 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-cookies">tes
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-cookies.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/cookies.js"></script>
 ```
 
 ## How to control the script
@@ -25,7 +17,7 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 ### load
 
 ```javascript
-value = useful.cookies.load(name);
+value = cookies.load(name);
 ```
 
 Retrieves a value from a cookie.
@@ -37,7 +29,7 @@ Retrieves a value from a cookie.
 ### save
 
 ```javascript
-useful.cookies.save(name, value, expires, path, domain, secure);
+cookies.save(name, value, expires, path, domain, secure);
 ```
 
 Saves a name-value pair to a cookie.
@@ -57,7 +49,7 @@ Saves a name-value pair to a cookie.
 ### clear
 
 ```javascript
-useful.cookies.clear(name, path, domain);
+cookies.clear(name, path, domain);
 ```
 
 Clears a name-value pair from a cookie.
@@ -82,15 +74,6 @@ The following commands are available for development:
 + `gulp watch` - Continuously recompiles updated files during development sessions.
 + `gulp serve` - Serves the project on a temporary web server at http://localhost:8500/.
 + `gulp php` - Serves the project on a temporary php server at http://localhost:8500/.
-
-## How to test the script
-
-These test uses Selenium from http://docs.seleniumhq.org/
-
-+ `npm install webdriverjs` - Installs the webdriver prerequisite.
-+ `npm install mocha -g` - Installs the prerequisite test framework.
-+ `java -jar /Applications/Selenium/selenium-server-standalone-2.42.2.jar` - Starts Selenium.
-+ `mocha` - Runs the automated tests.
 
 ## License
 

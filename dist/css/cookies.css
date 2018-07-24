@@ -1,0 +1,15 @@
+/*
+	Example Styling for Useful Functions
+*/
+.cookies-tests dt {
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.cookies-tests dd {
+  display: block;
+  margin: 0 0 1.3em 0;
+  padding: 0; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIl9leGFtcGxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUU7QUFDRjtFQUVFLGtCQUFrQjtFQUNsQixlQUFlO0VBQ2YsVUFBVTtFQUNWLFdBQVcsRUFDWDs7QUFORjtFQVFFLGVBQWU7RUFDZixvQkFBb0I7RUFDcEIsV0FBVyxFQUNYIiwiZmlsZSI6ImNvb2tpZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcblx0RXhhbXBsZSBTdHlsaW5nIGZvciBVc2VmdWwgRnVuY3Rpb25zXG4qL1xuLmNvb2tpZXMtdGVzdHMge1xuXHRkdCB7XG5cdFx0Zm9udC13ZWlnaHQgOiBib2xkO1xuXHRcdGRpc3BsYXkgOiBibG9jaztcblx0XHRtYXJnaW4gOiAwO1xuXHRcdHBhZGRpbmcgOiAwO1xuXHR9XG5cdGRkIHtcblx0XHRkaXNwbGF5IDogYmxvY2s7XG5cdFx0bWFyZ2luIDogMCAwIDEuM2VtIDA7XG5cdFx0cGFkZGluZyA6IDA7XG5cdH1cbn1cbiJdfQ== */
