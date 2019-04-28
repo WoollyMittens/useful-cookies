@@ -52,5 +52,5 @@ var cookies = {
 };
 
 // return as a require.js module
-if (typeof define != 'undefined') define(['cookies'], function () { return cookies });
+if (typeof define != 'undefined') define([], function () { return cookies });
 if (typeof module != 'undefined') module.exports = cookies;

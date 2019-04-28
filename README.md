@@ -9,8 +9,24 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-cookies">tes
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/cookies.js"></script>
+<script src="js/cookies.js"></script>
 ```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'js/cookies.js'
+], function(cookies) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var cookies = require('js/cookies.js');
+``
 
 ## How to control the script
 
